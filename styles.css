@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/*SCROLLBAR*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7E7E7E; 
+    border-radius: 10px;
+}
+
+/*HEADER*/
+.container-header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container-header button, i {
+    display: none;
+}
+
+.container-header h1 a {
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.container-header header {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.container-header ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.container-header li, a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.container-header .header-option button, i {
+    display: none;
+}
+
+.container-header .menu-d {
+    display: none;
+}
+
+/*HOME STYLES*/
+
+.home {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('./img/home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.home h2 {
+    border: 5px solid #fff;
+    border-style: double;
+    width: 50%;
+    text-align: center;
+    font-size: 4rem;
+    padding: 20px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.home p {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 20px;
+}
+
+/*PHOTOS*/
+
+.photos {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.photos h2 {
+    text-align: center;
+    font-size: 3rem;
+    width: 40%;
+    padding: 20px;
+    margin: 20px;
+}
+
+.gallery-container {
+    width: 60%;
+    margin: 20px;
+}
+
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-item{
+    display: flex;
+    width: 1fr;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s;
+}
+
+.grid-item:hover{
+    transform: scale(1.02);
+}
+
+.grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*CONTACT*/
+
+.contact-container {
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-container h2 {
+    font-size: 3rem;
+    padding: 20px;
+    border: 5px solid #fff;
+    border-style: double;
+    margin-top: 40px;
+}
+
+.contact-container form {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    color: #000;
+    outline: none;
+}
+
+.contact-container input:nth-child(1) {
+    width: 40%;
+    margin-right: 20px;
+}
+.contact-container input:nth-child(2) {
+    width: 40%;
+    margin-left: 20px;
+}
+
+.contact-container .message {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 200px;
+    color: #000;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.contact-container button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    margin: 20px;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media only screen and (max-width: 1000px) {
+
+    .container-header {
+        z-index: 2;
+    }
+
+    .container-header i {
+        position: relative;
+        display: flex;
+        font-size: 1.3rem;
+        right: 20px;
+    }
+
+    .container-header .menu-d {
+        display: flex;
+        background: transparent;
+        outline: none;
+        border-style: none;
+    }
+
+    .container-header .header-d { 
+        display: none;
+    }
+
+    .container-header .header-option { 
+        top: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 3;
+    }
+
+    .container-header .header-option ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .container-header .header-option li {
+        margin: 25px;
+    }
+
+    .container-header .header-option button {
+        display: block;
+        position: absolute;
+        background: transparent;
+        outline: none;
+        border-style: none;
+        width: 100%;
+        top: 0;
+        left: 97%;
+        margin-top: 8px;
+    }
+
+    .container-header .header-option button i {
+        display: flex;
+        font-size: 1.5rem;
+    }
+
+    .container-header h1 a {
+        font-size: 1.5rem;
+    }
+
+    .home {
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .home h2 {
+        width: 90%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+
+    .photos {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .gallery-container {
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+    }
+
+    .gallery{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        grid-template-rows: 1fr;
+    }
+
+    .photos h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1000px;
+        height: 100%;
+        z-index: 1;
+        margin: 0;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        margin: 0;
+    }
+
+    .contact-container form{
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-container h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-container input {
+        height: 20px;
+    }
+
+    .contact-container input:nth-child(1) {
+        margin: 5px;
+    }
+
+    .contact-container input:nth-child(2) {
+        margin: 5px;
+    }
+
+    .contact-container input:nth-child(3) {
+        margin: 10px;
+    }
+
+    .message {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .home h2 {
+        font-size: 1.5rem;
+    }
+}
