@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Burguer",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repudiandae illo accusamus, sunt maiores eos sit quisquam dicta commodi distinctio, voluptas dolorum labore nisi nam tempore consequuntur earum vel debitis!",
+        "price": 120.00
+    },
+
+    {
+        "id": 2,
+        "name": "Burguer 2",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repudiandae illo accusamus, sunt maiores eos sit quisquam dicta commodi distinctio, voluptas dolorum labore nisi nam tempore consequuntur earum vel debitis!",
+        "price": 125.00
+    },
+
+    {
+        "id": 3,
+        "name": "Burguer 3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repudiandae illo accusamus, sunt maiores eos sit quisquam dicta commodi distinctio, voluptas dolorum labore nisi nam tempore consequuntur earum vel debitis!",
+        "price": 130.00
+    }
+]

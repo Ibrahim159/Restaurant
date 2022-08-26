@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&family=Ubuntu&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
 }
 
 /*SCROLLBAR*/
@@ -24,28 +27,22 @@
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: transparent;
     top: 0;
     left: 0;
     z-index: 1;
+    padding: 1rem;
 }
 
 .container-header button, i {
     display: none;
 }
 
-.container-header h1 a {
-    font-size: 1.8rem;
-    font-family: 'Lora', serif;
-    padding-left: 20px;
-    text-decoration: none;
-}
-
 .container-header header {
     display: flex;
-    width: 50%;
+    width: 70%;
     justify-content: center;
 }
 
@@ -59,6 +56,11 @@
     list-style: none;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: all 0.1s;
+}
+
+.container-header li, a:hover{
+    color: #EFB810;
 }
 
 .container-header .header-option button, i {
@@ -69,6 +71,11 @@
     display: none;
 }
 
+.menu-d {
+    position: relative;
+    left: 50%;
+}
+
 /*HOME STYLES*/
 
 .home {
@@ -76,30 +83,46 @@
     width: 100%;
     min-height: 100vh;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
-    background: url('./img/home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/home.jpg);
     background-size: cover;
     background-position: center;
+    position: static;
+}
+
+.home h1 {
+    text-align: center;
+    font-size: 7rem;
+    padding: 1rem;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    letter-spacing: 1rem;
 }
 
 .home h2 {
-    border: 5px solid #fff;
-    border-style: double;
-    width: 50%;
     text-align: center;
-    font-size: 4rem;
-    padding: 20px;
-    margin: 20px;
-    background: rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    padding: 2rem;
+    font-weight: 200;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 1px;
 }
 
 .home p {
-    width: 50%;
+    width: 59%;
     text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
-    margin: 20px;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.home a {
+    background: #EFB810;
+    padding: 10px 4rem;
+    border-radius: 5px;
+    color: #1a1a1a;
+    font-size: 1.5rem;
 }
 
 /*PHOTOS*/
@@ -221,8 +244,12 @@
 
 /*RESPONSIVE DESIGN*/
 
+
 @media only screen and (max-width: 1000px) {
 
+}
+
+@media only screen and (max-width: 600px) {
     .container-header {
         z-index: 2;
     }
@@ -290,14 +317,20 @@
 
     .home {
         width: 100%;
-        flex-direction: column;
-        margin: 0;
+        padding: 8px;
+    }
+
+    .home h1 {
+        max-width: 100%;
+        font-size:1.8rem;
     }
 
     .home h2 {
-        width: 90%;
-        font-size: 2rem;
-        padding: 20px;
+        font-size: 1.5rem;
+    }
+
+    .home p {
+        width: 100%;
     }
 
     .photos {
@@ -369,8 +402,9 @@
     }
 }
 
-@media only screen and (max-width: 350px) {
-    .home h2 {
-        font-size: 1.5rem;
+@media only screen and (max-width: 380px) {
+    .home h1 {
+        max-width: 100%;
+        font-size:1.4rem;
     }
 }
